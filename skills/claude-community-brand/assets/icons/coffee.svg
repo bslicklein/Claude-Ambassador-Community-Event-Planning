@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268 252">
+  <!-- Coffee cup drawn to match the kit's hand-drawn icon style (thick
+       irregular ink strokes, ivory fills). Not from the official set. -->
+  <path d="M104 74 C97 60 108 54 104 40 C101 30 107 20 114 12" fill="none" stroke="#141413" stroke-width="9" stroke-linecap="round"/>
+  <path d="M146 76 C140 62 152 56 148 42 C145 32 151 24 157 16" fill="none" stroke="#141413" stroke-width="9" stroke-linecap="round"/>
+  <path d="M60 104 C58 99 64 94 71 95 L186 92 C194 91 199 97 197 103 L189 200 C188 213 176 224 162 225 L94 227 C80 228 68 218 66 205 Z" fill="#FAF9F5" stroke="#141413" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M196 116 C226 108 244 128 237 152 C231 172 212 182 192 178" fill="none" stroke="#141413" stroke-width="10" stroke-linecap="round"/>
+  <path d="M74 122 L184 119" fill="none" stroke="#141413" stroke-width="8" stroke-linecap="round"/>
+</svg>

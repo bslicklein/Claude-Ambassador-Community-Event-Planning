@@ -1,0 +1,90 @@
+{
+  "_comment": "Persona library. Copy the ones you want into config.json under \"personas\", set target/cap, reorder by priority. A person is assigned to the FIRST persona they match, so order is the tie-break. Every match field is optional; all listed fields must pass. Values: a list (membership), a string (single value), {\"min\": n} / {\"max\": n} for numbers, {\"any\": true} for non-empty, {\"not\": [...]} for exclusion, \"title_match\" for a regex over the verified title and self-reported role.",
+
+  "library": [
+    {
+      "name": "Community operator",
+      "why": "Runs a meetup, chapter, cohort, or devrel program. The cross-promotion engine of the room, and the reason influence is weighted at 40.",
+      "match": {"community_leader": "yes"},
+      "target": null
+    },
+    {
+      "name": "Amplifier",
+      "why": "Owns a real audience. Anything they post about the event reaches people you cannot.",
+      "match": {"social_reach": ["medium", "large"]},
+      "target": null
+    },
+    {
+      "name": "Verified founder",
+      "why": "Self-declared founder whose company survived the founder check with funding or real revenue.",
+      "match": {"founder_check": "verified"},
+      "target": null
+    },
+    {
+      "name": "Early-stage founder",
+      "why": "Founding something real but early or unconfirmed. Kept separate so the room is not all seed-stage.",
+      "match": {"role_level": "founder", "founder_check": {"not": ["demoted"]}},
+      "target": null
+    },
+    {
+      "name": "Senior enterprise",
+      "why": "Director and above inside a large company. Usually the scarcest persona, so expect the quota to spill.",
+      "match": {"role_tier": {"min": 5}, "company_size_pts": {"min": 6}},
+      "target": null
+    },
+    {
+      "name": "Name-brand operator",
+      "why": "Works somewhere the room recognizes. Logos in the room, without needing seniority.",
+      "match": {"brand_anchor": {"any": true}},
+      "target": null
+    },
+    {
+      "name": "Technical builder",
+      "why": "Ships with the tool already. These are the people who unblock a table, so table seeding depends on having enough of them.",
+      "match": {"is_builder": "yes"},
+      "target": null
+    },
+    {
+      "name": "Investor",
+      "why": "Capital in the room. High leverage for founders, and a different conversation than operators.",
+      "match": {"title_match": "(general |managing )?partner|venture|investor|\\bvc\\b|angel|principal, invest"},
+      "target": null
+    },
+    {
+      "name": "Operator",
+      "why": "Runs a function inside a company. Manager through VP, not founding, not enterprise-senior. The default working majority of most rooms.",
+      "match": {"role_level": ["vp", "director", "senior_manager", "manager"]},
+      "target": null
+    },
+    {
+      "name": "Domain specialist",
+      "why": "Sits in a focus vertical. Use when the event is pitched at an industry rather than a job type.",
+      "match": {"vertical": {"min": 1}},
+      "target": null
+    },
+    {
+      "name": "Academic or educator",
+      "why": "Teaches or researches. Brings a cohort behind them, which is distribution of a different shape.",
+      "match": {"title_match": "professor|lecturer|instructor|dean|researcher|teacher|faculty"},
+      "target": null
+    },
+    {
+      "name": "Press or creator",
+      "why": "Writes about this for a living. Decide deliberately whether the room is on record.",
+      "match": {"title_match": "journalist|reporter|editor|writer|producer|content creator|creator"},
+      "target": null
+    },
+    {
+      "name": "Emerging talent",
+      "why": "Students and early career. Cheap to seat, and the reason a room does not calcify. Usually needs a floor AND a cap.",
+      "match": {"role_level": ["student", "early"]},
+      "target": null
+    },
+    {
+      "name": "Practitioner",
+      "why": "Catch-all. Matches everyone left. Always put it last, and leave its target null so it absorbs the spill.",
+      "match": {},
+      "target": null
+    }
+  ]
+}

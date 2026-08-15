@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268 252">
+  <!-- Hand-drawn kit style: thick irregular ink strokes, ivory fills. -->
+  <path d="M134 32 C161 46 190 54 216 54 C219 101 210 148 188 181 C172 203 155 215 134 223 C113 215 96 203 80 181 C58 148 49 101 52 54 C78 54 107 46 134 32 Z" fill="#FAF9F5" stroke="#141413" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M134 100 C147 100 156 110 156 122 C156 134 147 144 134 144 C121 144 112 134 112 122 C112 110 121 100 134 100 Z" fill="none" stroke="#141413" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M134 144 C132 158 132 170 134 180" fill="none" stroke="#141413" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

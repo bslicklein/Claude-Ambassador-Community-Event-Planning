@@ -1,0 +1,15 @@
+{
+  "name": "ambassador-events",
+  "owner": {
+    "name": "Brandon Slicklein",
+    "email": "bmslicklein@gmail.com"
+  },
+  "description": "Claude Ambassador community event planning. One plugin carrying the full event toolkit, from attendee research to the signs on the wall.",
+  "plugins": [
+    {
+      "name": "ambassador",
+      "source": "./",
+      "description": "Run a Claude Community event end to end: research and seat the attendee list, build the deck, and produce every printed artifact on brand and on spec."
+    }
+  ]
+}

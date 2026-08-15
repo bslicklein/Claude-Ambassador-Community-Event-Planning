@@ -1,0 +1,9 @@
+{
+  "name": "ambassador",
+  "description": "Claude Ambassador community event planning toolkit: attendee research and seating, event decks, brand system, name badges, welcome board, and roll-up banner. Skills invoke as /ambassador:<skill-name>.",
+  "author": {
+    "name": "Brandon Slicklein",
+    "email": "bmslicklein@gmail.com"
+  },
+  "repository": "https://github.com/bslicklein/Claude-Ambassador-Community-Event-Planning"
+}

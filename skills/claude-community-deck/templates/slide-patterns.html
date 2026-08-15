@@ -1,0 +1,855 @@
+<!-- ============================================================
+     SLIDE PATTERN LIBRARY · Claude Community deck system
+
+     Every pattern below is copy-paste ready. Paste the block into your
+     deck.template.html where the SLIDES marker comment sat, then rewrite copy.
+     Preview them all: python3 build.py --patterns && open templates/slide-patterns-preview.html
+
+     Grounds:  (default) = ivory   ·   .clay = clay   ·   .ink = near-black
+     Add .no-chrome to drop the spark and the footer (title and close only).
+     Every content slide wraps its guts in <div class="pad">.
+     The .callout is always the LAST child of .pad. One per slide, at most.
+     ============================================================ -->
+
+
+<!-- ── TITLE ────────────────────────────────────────────────────
+     Opens the deck. Clay, no chrome, arch lockup with the event icon
+     nested in the hollow. Swap coffee.svg for the icon that matches the
+     event: meetup, workshop, conversation, impact-lab, or an industry.
+     Icon `top` value tunes the nesting: 92px at a 520px lockup width. -->
+<div class="wrap"><section class="slide clay no-chrome">
+  <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 80px">
+    <img src="{{ASSET:spark-ivory.png}}" style="width:74px;margin-bottom:26px" alt="">
+    <div class="lockup" style="width:520px">
+      <img class="arch" src="{{ASSET:arch-ivory.png}}" alt="Claude Community">
+      <img class="ico" src="{{ASSET:coffee.svg}}" style="top:92px;width:112px" alt="">
+    </div>
+    <h1 style="margin-top:96px;font-size:112px">Deck Title</h1>
+    <p style="font-family:'AnthropicSans';font-size:17px;letter-spacing:.24em;text-transform:uppercase;margin-top:26px;color:rgba(250,249,245,.92)">Event Name · New York</p>
+    <p style="font-family:'AnthropicSans';font-size:14px;letter-spacing:.2em;text-transform:uppercase;margin-top:14px;color:rgba(250,249,245,.68)">Weekday, Month 00, 2026 · Venue, Street Address</p>
+  </div>
+</section></div>
+
+
+<!-- ── WELCOME · text beside a square ───────────────────────────
+     Slide 2 of the chapter frame. Who is speaking and what this room is.
+     Right side takes nyc-square.png or community-square.png. -->
+<div class="wrap"><section class="slide">
+  <div class="pad" style="flex-direction:row;gap:56px;align-items:center">
+    <div style="flex:1.25">
+      <p class="kicker">Welcome</p>
+      <h2>Claude Community NYC</h2>
+      <p class="lede">A free, open community for people doing real work with Claude in New York. Run by ambassadors, supported by Anthropic, powered by whoever shows up.</p>
+      <div class="rule"></div>
+      <p class="body"><strong style="font-family:'AnthropicSans';font-weight:600">Brandon Slicklein</strong><br>
+      Claude Community Ambassador for New York City<br>
+      <span style="color:rgba(20,20,19,.5)">Product &amp; Engineering vertical: fintech, legal, private equity, edtech</span></p>
+    </div>
+    <div style="flex:1;display:flex;justify-content:flex-end">
+      <img src="{{ASSET:nyc-square.png}}" style="width:404px;border-radius:18px" alt="Claude Community New York">
+    </div>
+  </div>
+</section></div>
+
+
+<!-- ── THREE TILES · numbered ───────────────────────────────────
+     Three parallel reasons, pillars or principles. Clay tiles on ivory.
+     Use .c2 or .c4 for two or four. Cap the body at ~30 words per tile. -->
+<div class="wrap"><section class="slide">
+  <div class="pad">
+    <p class="kicker">Why we're here</p>
+    <h2>Three reasons this room exists</h2>
+    <p class="lede tight">One or two sentences that frame the three, and say what this is not.</p>
+    <div class="cols c3">
+      <div class="tile"><span class="num">01</span><h3>First pillar</h3><p>The claim, then the reason it is true, in two short sentences that do not hedge.</p></div>
+      <div class="tile"><span class="num">02</span><h3>Second pillar</h3><p>The claim, then the reason it is true, in two short sentences that do not hedge.</p></div>
+      <div class="tile"><span class="num">03</span><h3>Third pillar</h3><p>The claim, then the reason it is true, in two short sentences that do not hedge.</p></div>
+    </div>
+  </div>
+</section></div>
+
+
+<!-- ── STAT ROW ─────────────────────────────────────────────────
+     Four numbers that size the thing. Keep values short: 10, 5+LI, $0.
+     Labels are uppercase and tiny, so three words maximum. -->
+<div class="wrap"><section class="slide">
+  <div class="pad">
+    <p class="kicker">The shape of it</p>
+    <h2>One chapter of a global program</h2>
+    <p class="lede tight">Two sentences on the scope, ending with something concrete and local.</p>
+    <div class="stats">
+      <div class="stat"><div class="n">10</div><div class="l">NYC Ambassadors</div></div>
+      <div class="stat"><div class="n">5+LI</div><div class="l">Boroughs, and Long Island</div></div>
+      <div class="stat"><div class="n">4</div><div class="l">Event formats</div></div>
+      <div class="stat"><div class="n">$0</div><div class="l">Cost, always</div></div>
+    </div>
+    <div class="callout">Attendee lists stay confidential. Come to learn, not to be sold to.</div>
+  </div>
+</section></div>
+
+
+<!-- ── AMBASSADOR ROSTER ────────────────────────────────────────
+     Ten fit comfortably in two columns. Headshots live in
+     assets/ambassadors/. No photo? Swap the <img class="pic"> for
+     <div class="coin">MR</div> and it renders initials on clay. -->
+<div class="wrap"><section class="slide">
+  <div class="pad">
+    <p class="kicker">Who runs it</p>
+    <h2>Meet your NYC ambassadors</h2>
+    <div class="roster">
+      <div class="amb"><img class="pic" src="{{ASSET:hs-marie.jpg}}" alt="Marie Roker-Jones"><div><div class="n">Marie Roker-Jones</div><div class="v">City Ambassador</div></div></div>
+      <div class="amb"><img class="pic" src="{{ASSET:hs-alex.jpg}}" alt="Alex Roytenberg"><div><div class="n">Alex Roytenberg</div><div class="v">Finance</div></div></div>
+      <div class="amb"><img class="pic" src="{{ASSET:hs-anupam.jpg}}" alt="Anupam Anand Ojha"><div><div class="n">Anupam Anand Ojha</div><div class="v">Drug Discovery &amp; Computational Biology</div></div></div>
+      <div class="amb"><img class="pic" src="{{ASSET:hs-brandon.png}}" alt="Brandon Slicklein"><div><div class="n">Brandon Slicklein</div><div class="v">Product &amp; Engineering</div></div></div>
+      <div class="amb"><img class="pic" src="{{ASSET:hs-kelly.jpg}}" alt="Dr. Kelly H. Zou"><div><div class="n">Dr. Kelly H. Zou</div><div class="v">Healthcare &amp; FinTech</div></div></div>
+      <div class="amb"><img class="pic" src="{{ASSET:hs-hannah.png}}" alt="Hannah Stulberg"><div><div class="n">Hannah Stulberg</div><div class="v">Product Management</div></div></div>
+      <div class="amb"><img class="pic" src="{{ASSET:hs-lara.jpg}}" alt="Lara Shackelford"><div><div class="n">Lara Shackelford</div><div class="v">Financial Services</div></div></div>
+      <div class="amb"><img class="pic" src="{{ASSET:hs-mikaela.jpg}}" alt="Mikaela Reyes"><div><div class="n">Mikaela Reyes</div><div class="v">Go-to-Market</div></div></div>
+      <div class="amb"><img class="pic" src="{{ASSET:hs-mohammed.jpg}}" alt="Mohammed Mamun"><div><div class="n">Mohammed Mamun</div><div class="v">Software Development</div></div></div>
+      <div class="amb"><img class="pic" src="{{ASSET:hs-prasanna.jpg}}" alt="Prasanna Gopalakrishnan"><div><div class="n">Prasanna Gopalakrishnan</div><div class="v">Enterprise Adoption</div></div></div>
+    </div>
+    <div class="callout" style="margin-top:auto;font-size:19px">Find the ambassador who speaks your industry and bring them your hardest problem. That is what they are here for.</div>
+  </div>
+</section></div>
+
+
+<!-- ── INDUSTRY ICON GRID · clay ────────────────────────────────
+     Eight lanes, hand-drawn icons from assets/icons/. Available:
+     finance, legal, healthcare, education, real-estate, developer,
+     marketing, retail, private-equity, life-sciences. Need a new one?
+     Load the claude-community-brand skill and follow the icon recipe. -->
+<div class="wrap"><section class="slide clay">
+  <div class="pad">
+    <p class="kicker">Claude for your industry</p>
+    <h2 style="color:var(--ivory)">Every lane has a version of this</h2>
+    <div class="icongrid">
+      <div class="ind"><img src="{{ASSET:finance.svg}}" alt=""><div class="n">Finance</div><div class="d">Diligence memos, model review, portfolio monitoring</div></div>
+      <div class="ind"><img src="{{ASSET:legal.svg}}" alt=""><div class="n">Legal</div><div class="d">Matter intake, clause extraction, discovery review</div></div>
+      <div class="ind"><img src="{{ASSET:healthcare.svg}}" alt=""><div class="n">Healthcare</div><div class="d">Literature synthesis, prior auth, protocol drafting</div></div>
+      <div class="ind"><img src="{{ASSET:education.svg}}" alt=""><div class="n">Education</div><div class="d">Curriculum design, feedback at scale, tutoring</div></div>
+      <div class="ind"><img src="{{ASSET:real-estate.svg}}" alt=""><div class="n">Real estate</div><div class="d">Lease abstraction, comps, deal packets</div></div>
+      <div class="ind"><img src="{{ASSET:developer.svg}}" alt=""><div class="n">Engineering</div><div class="d">Migrations, reviews and tests that run themselves</div></div>
+      <div class="ind"><img src="{{ASSET:marketing.svg}}" alt=""><div class="n">Marketing</div><div class="d">Research to draft to distribution, in your voice</div></div>
+      <div class="ind"><img src="{{ASSET:retail.svg}}" alt=""><div class="n">Retail</div><div class="d">Catalog operations, support triage, demand signals</div></div>
+    </div>
+  </div>
+</section></div>
+
+
+<!-- ── FOUR FORMATS ─────────────────────────────────────────────
+     The four official event formats. This slide is near-verbatim
+     reusable across every deck; only the "you are at one" line moves
+     to whichever format tonight is. -->
+<div class="wrap"><section class="slide">
+  <div class="pad">
+    <p class="kicker">How we gather</p>
+    <h2>Four formats, one calendar</h2>
+    <p class="lede tight">Pick the one that matches how much time you have and how much you want your hands on the keyboard.</p>
+    <div class="cols c4">
+      <div class="fmt"><img src="{{ASSET:conversation.svg}}" alt=""><div class="n">Conversations</div><div class="d">Small group, one topic, everybody talks. Best for the question you are embarrassed to ask.</div></div>
+      <div class="fmt"><img src="{{ASSET:meetup.svg}}" alt=""><div class="n">Meetups</div><div class="d">The social one. Coffee, a short talk, and the people you should have met months ago. You are at one.</div></div>
+      <div class="fmt"><img src="{{ASSET:workshop.svg}}" alt=""><div class="n">Workshops</div><div class="d">Hands on keyboards. You leave having built the thing, not having watched it get built.</div></div>
+      <div class="fmt"><img src="{{ASSET:impact-lab.svg}}" alt=""><div class="n">Impact Labs</div><div class="d">A full build day pointed at one real problem, usually for an organization that needs it.</div></div>
+    </div>
+  </div>
+</section></div>
+
+
+<!-- ── TIMELINE · how tonight runs ──────────────────────────────
+     Five stops maximum on a 1080-wide viewBox. Alternate the dot fill
+     between clay and ink. Two short lines of detail under each label. -->
+<div class="wrap"><section class="slide">
+  <div class="pad">
+    <p class="kicker">Housekeeping</p>
+    <h2>How tonight runs</h2>
+    <div class="fig">
+      <svg class="tl" viewBox="0 0 1080 210" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Timeline of the evening">
+        <line x1="30" y1="96" x2="1010" y2="96" stroke="rgba(20,20,19,.22)" stroke-width="2"/>
+        <g>
+          <circle cx="76" cy="96" r="13" fill="#D97757"/>
+          <text class="big c" x="76" y="56" text-anchor="middle">5:00</text>
+          <text class="txtb" x="76" y="140" text-anchor="middle">Doors</text>
+          <text class="txt" x="76" y="164" text-anchor="middle">Check in, coffee,</text>
+          <text class="txt" x="76" y="186" text-anchor="middle">coworking</text>
+        </g>
+        <g>
+          <circle cx="296" cy="96" r="13" fill="#141413"/>
+          <text class="big" x="296" y="56" text-anchor="middle">5:30</text>
+          <text class="txtb" x="296" y="140" text-anchor="middle">Welcome and keynote</text>
+          <text class="txt" x="296" y="164" text-anchor="middle">This deck. Thirty-ish</text>
+          <text class="txt" x="296" y="186" text-anchor="middle">minutes.</text>
+        </g>
+        <g>
+          <circle cx="528" cy="96" r="13" fill="#D97757"/>
+          <text class="big c" x="528" y="56" text-anchor="middle">6:00</text>
+          <text class="txtb" x="528" y="140" text-anchor="middle">Breakout hour</text>
+          <text class="txt" x="528" y="164" text-anchor="middle">Your table, your three</text>
+          <text class="txt" x="528" y="186" text-anchor="middle">questions</text>
+        </g>
+        <g>
+          <circle cx="762" cy="96" r="13" fill="#D97757"/>
+          <text class="big c" x="762" y="56" text-anchor="middle">7:00</text>
+          <text class="txtb" x="762" y="140" text-anchor="middle">Report-outs</text>
+          <text class="txt" x="762" y="164" text-anchor="middle">Each table shares what</text>
+          <text class="txt" x="762" y="186" text-anchor="middle">it discussed</text>
+        </g>
+        <g>
+          <circle cx="962" cy="96" r="13" fill="#141413"/>
+          <text class="big" x="962" y="56" text-anchor="middle">7:30</text>
+          <text class="txtb" x="962" y="140" text-anchor="middle">Closing remarks</text>
+          <text class="txt" x="962" y="164" text-anchor="middle">Wrapping up</text>
+          <text class="txt" x="962" y="186" text-anchor="middle">by 8:00</text>
+        </g>
+      </svg>
+    </div>
+    <div class="callout">Venue logistics in one sentence: where the food is, what the drink ticket covers, which floor.</div>
+  </div>
+</section></div>
+
+
+<!-- ── TWO-CARD ANATOMY ─────────────────────────────────────────
+     Front and back of a badge, before and after, two halves of one
+     artifact. Bulleted lists are allowed here and almost nowhere else. -->
+<div class="wrap"><section class="slide">
+  <div class="pad">
+    <p class="kicker">Flip it over</p>
+    <h2>Your badge is the agenda</h2>
+    <div class="bcols">
+      <div class="bcard">
+        <div class="side">Front</div>
+        <ul>
+          <li>The Claude Community NYC mark and the event lockup</li>
+          <li>Your name, set large enough to read across a table</li>
+          <li>Your role and company, so nobody has to open with "so what do you do"</li>
+          <li>New York · Month 00, 2026</li>
+        </ul>
+      </div>
+      <div class="bcard">
+        <div class="side">Back</div>
+        <ul>
+          <li>Your <strong>table number</strong>, in the corner</li>
+          <li>Tonight's theme in one line</li>
+          <li><strong>Three questions written for your table specifically</strong></li>
+          <li>Your name beside a QR code that opens your LinkedIn</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout">The one-sentence reason it was built this way.</div>
+  </div>
+</section></div>
+
+
+<!-- ── EVENT CALENDAR ───────────────────────────────────────────
+     What is next on the NYC calendar. Five rows fit. Date column is
+     clay caps; the sub-line under each title is the one-line pitch. -->
+<div class="wrap"><section class="slide">
+  <div class="pad">
+    <p class="kicker">What's next</p>
+    <h2>On the NYC calendar</h2>
+    <div style="margin:auto 0">
+      <div class="evt"><div class="d">Aug 20 · Thursday</div><div class="t">Event Name<span>One line on who it is for and what they will leave with.</span></div></div>
+      <div class="evt"><div class="d">Aug 27 · Thursday</div><div class="t">Event Name<span>One line on who it is for and what they will leave with.</span></div></div>
+      <div class="evt"><div class="d">Sep 8 · Tuesday</div><div class="t">Event Name<span>One line on who it is for and what they will leave with.</span></div></div>
+      <div class="evt"><div class="d">Sep 15 · Tuesday</div><div class="t">Event Name<span>One line on who it is for and what they will leave with.</span></div></div>
+      <div class="evt"><div class="d">Oct 5–11 · AI Week</div><div class="t">Event Name<span>One line on who it is for and what they will leave with.</span></div></div>
+    </div>
+    <div class="callout">Built something good with Claude? Submit it at <strong>claudecommunitynyc.com/demos</strong> and we will feature it at the next event.</div>
+  </div>
+</section></div>
+
+
+<!-- ── SECTION DIVIDER · clay ───────────────────────────────────
+     One per part. Part number as kicker, the part's name as h1, and a
+     single sentence saying what this part buys the audience. -->
+<div class="wrap"><section class="slide clay">
+  <div class="pad" style="justify-content:center">
+    <p class="kicker">Part One</p>
+    <h1 style="font-size:118px;margin-top:18px">Part Name</h1>
+    <p class="lede" style="font-size:26px;max-width:800px">One sentence on what this part changes for the person listening.</p>
+  </div>
+</section></div>
+
+
+<!-- ── BIG QUOTE ────────────────────────────────────────────────
+     The sentence the whole section argues with. Serif, huge, hard break
+     where you want the line to land. Rule, then the reply beneath. -->
+<div class="wrap"><section class="slide">
+  <div class="pad" style="justify-content:center">
+    <p class="kicker">The ceiling</p>
+    <p class="quote" style="margin-top:22px">“The sentence everyone<br>says out loud.”</p>
+    <div class="rule" style="margin:34px 0"></div>
+    <p class="lede" style="margin-top:0;font-size:25px">Why that sentence is the ceiling, in two sentences that name the consequence rather than scolding the speaker.</p>
+  </div>
+</section></div>
+
+
+<!-- ── STACKED BARS + LEGEND ────────────────────────────────────
+     Before and after as two proportional bars. flex values are the
+     proportions. Legend defines each band so the bars need no axis. -->
+<div class="wrap"><section class="slide">
+  <div class="pad">
+    <p class="kicker">The reframe</p>
+    <h2>It does not remove the work. It moves it.</h2>
+    <div style="margin:auto 0">
+      <div class="barlab">Before · you are the worker</div>
+      <div class="bar">
+        <div class="seg do" style="flex:70">Doing</div>
+        <div class="seg ch" style="flex:18">Checking</div>
+        <div class="seg de" style="flex:12">Designing</div>
+      </div>
+      <div class="barlab" style="margin-top:22px">After · you are the architect</div>
+      <div class="bar">
+        <div class="seg do" style="flex:12">Doing</div>
+        <div class="seg ch" style="flex:23">Checking</div>
+        <div class="seg de" style="flex:65">Designing</div>
+      </div>
+      <div class="leg">
+        <div class="item"><span class="sw do"></span><div><div class="lt">Doing</div><div class="ld">One line defining this band.</div></div></div>
+        <div class="item"><span class="sw ch"></span><div><div class="lt">Checking</div><div class="ld">One line defining this band.</div></div></div>
+        <div class="item"><span class="sw de"></span><div><div class="lt">Designing</div><div class="ld">One line defining this band.</div></div></div>
+      </div>
+    </div>
+    <div class="callout">The one-line consequence of the shift.</div>
+  </div>
+</section></div>
+
+
+<!-- ── COMPARISON TABLE ─────────────────────────────────────────
+     Old way versus new way. Six rows is the ceiling. Left column is
+     dimmed and the right column carries the weight. Cells are phrases,
+     never sentences. No callout needed; the table is the argument. -->
+<div class="wrap"><section class="slide">
+  <div class="pad">
+    <p class="kicker">The shift</p>
+    <h2>Old framing → new framing</h2>
+    <table class="cmp">
+      <tr><th>Old framing</th><th>New framing</th></tr>
+      <tr><td>A one-off request</td><td>A repeatable capability</td></tr>
+      <tr><td>You carry the context in your head</td><td>The system fetches its own context</td></tr>
+      <tr><td>You remember the standard</td><td>The standard is written down and enforced</td></tr>
+      <tr><td>You are the one who checks the output</td><td>The system checks itself before you see it</td></tr>
+      <tr><td>It runs when you sit down</td><td>It runs when the work appears</td></tr>
+      <tr><td>Scales with how much you type</td><td>Scales with how well you define</td></tr>
+    </table>
+  </div>
+</section></div>
+
+
+<!-- ── TWO-CHART FIGURE + PAIRED CAPTIONS ───────────────────────
+     Two small charts side by side inside one viewBox, each with its own
+     caption underneath via .caps2. Ink stroke for the losing pattern,
+     clay for the winning one. -->
+<div class="wrap"><section class="slide">
+  <div class="pad">
+    <p class="kicker">Why it matters</p>
+    <h2>A spike is not a floor.</h2>
+    <div class="fig">
+      <svg viewBox="0 0 1080 262" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Volatile line versus stepped line">
+        <g>
+          <text class="lblc" x="0" y="14">The volatile pattern</text>
+          <text class="txt c" x="0" y="40">the average never moves</text>
+          <line x1="0" y1="252" x2="500" y2="252" stroke="rgba(20,20,19,.25)"/>
+          <line x1="0" y1="56" x2="0" y2="252" stroke="rgba(20,20,19,.25)"/>
+          <polyline points="10,212 60,110 110,228 160,140 210,238 260,98 310,222 360,170 410,242 460,130"
+                    fill="none" stroke="#141413" stroke-width="2.5" stroke-linejoin="round"/>
+          <line x1="10" y1="176" x2="470" y2="176" stroke="#D97757" stroke-width="2" stroke-dasharray="6 6"/>
+        </g>
+        <g transform="translate(580,0)">
+          <text class="lblc" x="0" y="14">The compounding pattern</text>
+          <text class="txt c" x="0" y="40">each step is one standard encoded</text>
+          <line x1="0" y1="252" x2="500" y2="252" stroke="rgba(20,20,19,.25)"/>
+          <line x1="0" y1="56" x2="0" y2="252" stroke="rgba(20,20,19,.25)"/>
+          <path d="M10 232 H110 V194 H210 V158 H310 V122 H410 V86 H480 V252 H10 Z" fill="#D97757" opacity=".16"/>
+          <path d="M10 232 H110 V194 H210 V158 H310 V122 H410 V86 H480" fill="none" stroke="#141413" stroke-width="2.5" stroke-linejoin="round"/>
+        </g>
+      </svg>
+    </div>
+    <div class="caps2">
+      <p class="cap" style="margin:0">What the left chart costs you, in one sentence.</p>
+      <p class="cap" style="margin:0">What the right chart buys you, in one sentence.</p>
+    </div>
+  </div>
+</section></div>
+
+
+<!-- ── DEFINITIONS TABLE ────────────────────────────────────────
+     Term, the precise definition, and the plain-English metaphor. The
+     third column is what people actually remember, so write it last and
+     make it concrete: "a doorbell instead of an alarm clock." -->
+<div class="wrap"><section class="slide">
+  <div class="pad">
+    <p class="kicker">Reference</p>
+    <h2>The five, defined</h2>
+    <div class="defs">
+      <div class="def head"><div>Term</div><div>What it is</div><div>In plain terms</div></div>
+      <div class="def"><div class="w">Skill</div><div class="m">The precise definition, one sentence, no jargon that itself needs defining.</div><div class="plain">A cheat sheet it reads before it starts.</div></div>
+      <div class="def"><div class="w">Connector</div><div class="m">The precise definition, one sentence, no jargon that itself needs defining.</div><div class="plain">A key to a room it can walk into.</div></div>
+      <div class="def"><div class="w">Scheduled task</div><div class="m">The precise definition, one sentence, no jargon that itself needs defining.</div><div class="plain">An alarm clock that does the chore for you.</div></div>
+      <div class="def"><div class="w">Managed agent</div><div class="m">The precise definition, one sentence, no jargon that itself needs defining.</div><div class="plain">A doorbell instead of an alarm clock.</div></div>
+      <div class="def"><div class="w">Loop</div><div class="m">The precise definition, one sentence, no jargon that itself needs defining.</div><div class="plain">It marks its own homework before handing it in.</div></div>
+    </div>
+    <div class="callout">Five words. Everything after this slide is those five, wired together in different orders.</div>
+  </div>
+</section></div>
+
+
+<!-- ── FLOW CHAIN ───────────────────────────────────────────────
+     Left-to-right stations with arrow markers. Conventions: the first
+     box is solid ink, the emphasised box is solid clay, ordinary boxes
+     are outlined, and the terminal box is dashed. The clay label under
+     each box names which organ or system does that step. -->
+<div class="wrap"><section class="slide">
+  <div class="pad">
+    <p class="kicker">The map</p>
+    <h2>How the parts fit together</h2>
+    <div class="fig">
+      <svg viewBox="0 0 1080 230" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Trigger to context to standard to work and check, then output">
+        <defs><marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+          <path d="M0 0 L9 4.5 L0 9 z" fill="#141413"/></marker>
+          <marker id="arc" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+          <path d="M0 0 L9 4.5 L0 9 z" fill="#D97757"/></marker></defs>
+        <g>
+          <rect x="0" y="62" width="176" height="92" rx="12" fill="#141413"/>
+          <text class="txtb i" x="88" y="102" text-anchor="middle">Trigger</text>
+          <text class="txt ii" x="88" y="128" text-anchor="middle">when it starts</text>
+          <text class="lblc" x="88" y="184" text-anchor="middle">Schedules ·</text>
+          <text class="lblc" x="88" y="204" text-anchor="middle">Managed agents</text>
+        </g>
+        <line x1="182" y1="108" x2="218" y2="108" stroke="#141413" stroke-width="2" marker-end="url(#ar)"/>
+        <g transform="translate(224,0)">
+          <rect x="0" y="62" width="176" height="92" rx="12" fill="none" stroke="#141413" stroke-width="1.5"/>
+          <text class="txtb" x="88" y="102" text-anchor="middle">Context</text>
+          <text class="txt" x="88" y="128" text-anchor="middle">what it can see</text>
+          <text class="lblc" x="88" y="184" text-anchor="middle">Connectors</text>
+        </g>
+        <line x1="406" y1="108" x2="442" y2="108" stroke="#141413" stroke-width="2" marker-end="url(#ar)"/>
+        <g transform="translate(448,0)">
+          <rect x="0" y="62" width="176" height="92" rx="12" fill="none" stroke="#141413" stroke-width="1.5"/>
+          <text class="txtb" x="88" y="102" text-anchor="middle">Standard</text>
+          <text class="txt" x="88" y="128" text-anchor="middle">how it's done here</text>
+          <text class="lblc" x="88" y="184" text-anchor="middle">Skills</text>
+        </g>
+        <line x1="630" y1="108" x2="666" y2="108" stroke="#141413" stroke-width="2" marker-end="url(#ar)"/>
+        <g transform="translate(672,0)">
+          <rect x="0" y="62" width="230" height="92" rx="12" fill="#D97757"/>
+          <text class="txtb i" x="115" y="102" text-anchor="middle">Work → Check</text>
+          <text class="txt ii" x="115" y="128" text-anchor="middle">act, grade, revise</text>
+          <text class="lblc" x="115" y="184" text-anchor="middle">Loops</text>
+          <path d="M18 58 C18 20, 212 20, 212 58" fill="none" stroke="#D97757" stroke-width="2" marker-end="url(#arc)"/>
+          <text class="txt c" x="115" y="14" text-anchor="middle">until it passes</text>
+        </g>
+        <line x1="908" y1="108" x2="944" y2="108" stroke="#141413" stroke-width="2" marker-end="url(#ar)"/>
+        <g transform="translate(950,0)">
+          <rect x="0" y="62" width="130" height="92" rx="12" fill="none" stroke="#141413" stroke-width="1.5" stroke-dasharray="5 4"/>
+          <text class="txtb" x="65" y="114" text-anchor="middle">Output</text>
+          <text class="lblc" x="65" y="184" text-anchor="middle">Back to</text>
+          <text class="lblc" x="65" y="204" text-anchor="middle">your systems</text>
+        </g>
+      </svg>
+    </div>
+    <div class="callout" style="margin-top:20px">Point at what is missing from the diagram, not at what is in it.</div>
+  </div>
+</section></div>
+
+
+<!-- ── NUMBERED LIST ────────────────────────────────────────────
+     Three points that need a sentence each. Title line is the claim,
+     sub-line is the evidence. Works on clay too; borders auto-invert. -->
+<div class="wrap"><section class="slide">
+  <div class="pad">
+    <p class="kicker">The quality lever</p>
+    <h2>Three things that change</h2>
+    <div class="list">
+      <div class="li"><div class="k">1</div><div><div class="t">The claim, stated as a full sentence</div><div class="s">The evidence or the mechanism, two sentences at most, concrete enough that someone could act on it tomorrow.</div></div></div>
+      <div class="li"><div class="k">2</div><div><div class="t">The claim, stated as a full sentence</div><div class="s">The evidence or the mechanism, two sentences at most, concrete enough that someone could act on it tomorrow.</div></div></div>
+      <div class="li"><div class="k">3</div><div><div class="t">The claim, stated as a full sentence</div><div class="s">The evidence or the mechanism, two sentences at most, concrete enough that someone could act on it tomorrow.</div></div></div>
+    </div>
+  </div>
+</section></div>
+
+
+<!-- ── TWO-CARD CONTRAST ────────────────────────────────────────
+     Without versus with. Left card sits on flat ink tint, right card on
+     clay tint with a clay border, so the eye lands on the right. -->
+<div class="wrap"><section class="slide">
+  <div class="pad">
+    <p class="kicker">The quality lever</p>
+    <h2>It moves the floor, not the ceiling</h2>
+    <div class="cols c2">
+      <div class="card" style="background:rgba(20,20,19,.04)">
+        <span class="num" style="color:rgba(20,20,19,.45)">Without</span>
+        <h3>The state everyone recognises</h3>
+        <p style="margin-top:12px">Three sentences describing the failure mode in terms the audience has personally lived through.</p>
+      </div>
+      <div class="card" style="background:rgba(217,119,87,.1);border-color:rgba(217,119,87,.45)">
+        <span class="num">With</span>
+        <h3>The state you are arguing for</h3>
+        <p style="margin-top:12px">Three sentences describing what replaces it, ending on the compounding effect rather than the feature.</p>
+      </div>
+    </div>
+    <div class="callout">The tell that tells you which side you are on today.</div>
+  </div>
+</section></div>
+
+
+<!-- ── CONCEPT SLIDE · lede, serif callout, three cards ──────────
+     The workhorse for introducing one idea. Lede defines it, the serif
+     callout is the memorable contrast line, the cards break it into
+     parts. Note the callout override: serif, 26px. -->
+<div class="wrap"><section class="slide">
+  <div class="pad">
+    <p class="kicker">Organ one · Skills</p>
+    <h2>Your procedure, written down once</h2>
+    <p class="lede tight">Two sentences that define the thing without using the word itself as its own definition.</p>
+    <div class="callout" style="font-size:26px;font-family:'AnthropicSerif';font-weight:300;line-height:1.3">A prompt says what you want <em>this time</em>.<br>A skill says how it is <em>always</em> done here.</div>
+    <div class="cols c3">
+      <div class="card"><h3>Part one</h3><p>What it covers, in a sentence and a half.</p></div>
+      <div class="card"><h3>Part two</h3><p>What it covers, in a sentence and a half.</p></div>
+      <div class="card"><h3>Part three</h3><p>What it covers, in a sentence and a half.</p></div>
+    </div>
+  </div>
+</section></div>
+
+
+<!-- ── PRODUCT SHOT · wide ──────────────────────────────────────
+     One screenshot filling the slide, caption underneath. Use when the
+     screenshot is landscape and the point is the whole screen.
+     Shots live in assets/product/ as cw-*.png. -->
+<div class="wrap"><section class="slide">
+  <div class="pad">
+    <p class="kicker">Skills · in the product</p>
+    <h2>Where they live</h2>
+    <div class="shotwide"><img src="{{ASSET:cw-skills.png}}" alt="Claude settings, Skills tab"></div>
+    <p class="cap" style="margin-top:18px">Name the exact path in the product, then say the one thing on screen that most people miss.</p>
+  </div>
+</section></div>
+
+
+<!-- ── PRODUCT SHOT · split ─────────────────────────────────────
+     Screenshot on the left, argument on the right. Add class .two to
+     .shotcol to stack two screenshots in the column. Note .pad gets the
+     extra class .prod, which turns it into a row. -->
+<div class="wrap"><section class="slide">
+  <div class="pad prod">
+    <div class="shotcol">
+      <img src="{{ASSET:cw-connectors.png}}" alt="Claude connectors settings">
+    </div>
+    <div class="txtcol">
+      <p class="kicker">Connectors · in the product</p>
+      <h2>One page, everything Claude can reach</h2>
+      <p class="cap">What the screenshot proves. Then the operational warning or the next action, because a screenshot alone teaches nothing.</p>
+      <p class="cap" style="margin-top:16px">An optional second paragraph for the "try this tonight" instruction.</p>
+    </div>
+  </div>
+</section></div>
+
+
+<!-- ── THREE SURFACES · triptych ────────────────────────────────
+     Browser, desktop, terminal side by side. The audience wants to see
+     the actual thing, and most of them have only ever met one of the
+     three. Capture fresh shots with capture-window.sh, into
+     assets/product/{browser,desktop,terminal}/ of the deck folder.
+     Shipped desktop and terminal images are visible placeholders, so if
+     one reaches a rehearsal you will see it immediately.
+     The three images are cropped to a fixed height from the top, so
+     capture all three at a similar window size or one will look zoomed. -->
+<div class="wrap"><section class="slide">
+  <div class="pad">
+    <p class="kicker">Where you meet it</p>
+    <h2>Same Claude, three front doors</h2>
+    <p class="lede tight">Most people have only ever opened one of these. The model and your skills are identical behind all three; what changes is how much of your machine it can touch.</p>
+    <div class="surfaces">
+      <div class="surf">
+        <img src="{{ASSET:cw-scheduled.png}}" alt="Claude in the browser">
+        <div class="sl">Browser</div>
+        <div class="sn">claude.ai</div>
+        <div class="sd">Nothing to install. Connectors reach your other apps. Where most people start and most teams stay.</div>
+      </div>
+      <div class="surf">
+        <img src="{{ASSET:claude-desktop.png}}" alt="The Claude desktop app">
+        <div class="sl">Desktop</div>
+        <div class="sn">Claude app</div>
+        <div class="sd">The same session, plus local files and a window that stays open beside the work you are doing.</div>
+      </div>
+      <div class="surf">
+        <img src="{{ASSET:claude-code.png}}" alt="Claude Code in the terminal">
+        <div class="sl">Terminal</div>
+        <div class="sn">Claude Code</div>
+        <div class="sd">It runs commands, edits files, and checks its own work against tests. The most agentic of the three.</div>
+      </div>
+    </div>
+    <div class="callout">Pick the door by how much you want it to be able to do without asking, not by how technical you are.</div>
+  </div>
+</section></div>
+
+
+<!-- ── TERMINAL SHOT · ink ground ───────────────────────────────
+     Terminal screenshots read best on the ink ground, where the slide
+     stops competing with the shot. Use for any Claude Code moment: a
+     plan, a diff, a test run going green. -->
+<div class="wrap"><section class="slide ink">
+  <div class="pad">
+    <p class="kicker">Claude Code · in the terminal</p>
+    <h2 style="color:var(--ivory)">It runs the check itself</h2>
+    <div class="shotwide"><img src="{{ASSET:claude-code.png}}" alt="Claude Code running in a terminal"></div>
+    <p class="cap" style="margin-top:16px">Say what is happening on screen in one sentence, then what it proves. A terminal shot with no narration is a wall of text to most of the room.</p>
+  </div>
+</section></div>
+
+
+<!-- ── TRIO OF PRODUCT CARDS ────────────────────────────────────
+     Three surfaces, tools or options compared on identical rows. Every
+     card must answer the same questions in the same order, or the
+     comparison does not read. Inline SVG icon at 32x32, 2px ink stroke. -->
+<div class="wrap"><section class="slide">
+  <div class="pad">
+    <p class="kicker">Know which door you are standing in</p>
+    <h2>Three surfaces, one engine</h2>
+    <div class="trio">
+      <div class="pcard">
+        <svg class="pic" viewBox="0 0 32 32" fill="none" stroke="#141413" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.4 7.2c6.4-.7 12.9-.7 19.3 0 .9.1 1.5.8 1.5 1.7.2 3.7.2 7.4 0 11.1 0 .9-.7 1.6-1.6 1.6-3.7.3-7.4.3-11.1.2l-6.8 4.6c-.6.4-1.4 0-1.4-.7l.1-4.1c-.7-.2-1.2-.8-1.2-1.5-.2-3.7-.2-7.5 0-11.2 0-.9.5-1.6 1.2-1.7Z"/><path d="M11.2 13.9c3.3-.2 6.5-.2 9.8 0"/><path d="M11.3 17.6c2.2-.2 4.5-.2 6.7 0"/></svg>
+        <div class="pn">Claude</div>
+        <div class="pd">Thinks with you</div>
+        <div class="prow"><div class="pl">Shape</div><div class="pv">A conversation</div></div>
+        <div class="prow"><div class="pl">Your role</div><div class="pv">In every single turn</div></div>
+        <div class="prow"><div class="pl">It reaches</div><div class="pv">Whatever you bring to the chat</div></div>
+        <div class="prow"><div class="pl">Done means</div><div class="pv">You read it and decide</div></div>
+        <div class="prow"><div class="pl">Reach for it</div><div class="pv">You are thinking something through</div></div>
+      </div>
+      <div class="pcard">
+        <svg class="pic" viewBox="0 0 32 32" fill="none" stroke="#141413" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.3 8.7 6.6 11l4.2-4.4"/><path d="M4.3 16.5 6.6 18.8 10.8 14.4"/><path d="M4.4 24.2 6.7 26.5 10.9 22.1"/><path d="M15.4 8.6c4.2-.3 8.4-.3 12.6 0"/><path d="M15.5 16.4c4.2-.3 8.3-.3 12.5 0"/><path d="M15.5 24.1c2.9-.3 5.8-.3 8.7 0"/></svg>
+        <div class="pn">Claude Cowork</div>
+        <div class="pd">Works for you</div>
+        <div class="prow"><div class="pl">Shape</div><div class="pv">A task with a plan</div></div>
+        <div class="prow"><div class="pl">Your role</div><div class="pv">Set the goal, then review</div></div>
+        <div class="prow"><div class="pl">It reaches</div><div class="pv">Your connected apps and files</div></div>
+        <div class="prow"><div class="pl">Done means</div><div class="pv">Progress and Outputs you check</div></div>
+        <div class="prow"><div class="pl">Reach for it</div><div class="pv">The work repeats</div></div>
+      </div>
+      <div class="pcard">
+        <svg class="pic" viewBox="0 0 32 32" fill="none" stroke="#141413" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.6 9.4 3.9 15.9c2.2 2.3 4.5 4.4 6.9 6.5"/><path d="M21.4 9.3c2.3 2.1 4.5 4.3 6.7 6.6-2.2 2.2-4.5 4.4-6.9 6.4"/><path d="M18.4 5.6c-1.6 6.9-3.2 13.7-5 20.5"/></svg>
+        <div class="pn">Claude Code</div>
+        <div class="pd">Builds it and proves it</div>
+        <div class="prow"><div class="pl">Shape</div><div class="pv">An agent in your repo</div></div>
+        <div class="prow"><div class="pl">Your role</div><div class="pv">Set the objective and the bar</div></div>
+        <div class="prow"><div class="pl">It reaches</div><div class="pv">Files, commands, tests</div></div>
+        <div class="prow"><div class="pl">Done means</div><div class="pv">Tests pass, diff is clean</div></div>
+        <div class="prow"><div class="pl">Reach for it</div><div class="pv">Done is machine-checkable</div></div>
+      </div>
+    </div>
+    <div class="callout">The line that collapses the three back into one idea.</div>
+  </div>
+</section></div>
+
+
+<!-- ── PROCESS MATRIX ───────────────────────────────────────────
+     Proves one pattern generalises. The chain runs across the top with
+     chevrons between stations; each row is one industry running it.
+     Cells are three or four words. Three rows fit; four is a squeeze. -->
+<div class="wrap"><section class="slide">
+  <div class="pad">
+    <p class="kicker">It generalizes</p>
+    <h2>Same pattern, different lane</h2>
+    <p class="lede tight" style="margin-top:12px">The chain from the last slide runs across the top. Each row is one industry running it.</p>
+    <div class="pmx">
+      <div class="lh"></div>
+      <div class="oh"><svg class="ic" viewBox="0 0 32 32" fill="none" stroke="#141413" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 13.5C8 9.4 11.5 6.2 16 6.3c4.4.1 7.9 3.4 7.8 7.4-.1 4.6.5 6.6 1.9 8.1.4.5.1 1.2-.6 1.2H6.8c-.7 0-1-.7-.6-1.2 1.5-1.6 1.9-3.6 1.8-8.3Z"/><path d="M13.2 26.3c.5 1.2 1.6 1.9 2.9 1.9 1.2 0 2.3-.7 2.8-1.9"/><path d="M16 3.2v2.9"/></svg><div class="on">Managed agent</div></div>
+      <div class="oh"><span class="chev"></span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="#141413" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M10.1 13.2a4.6 4.6 0 0 0 6.9.5l2.7-2.8a4.6 4.6 0 0 0-6.5-6.4l-1.6 1.6"/><path d="M13.5 10.4a4.6 4.6 0 0 0-6.9-.5l-2.7 2.8a4.6 4.6 0 0 0 6.5 6.4l1.5-1.5"/></svg><div class="on">Connectors</div></div>
+      <div class="oh"><span class="chev"></span><svg class="ic" viewBox="0 0 32 32" fill="none" stroke="#141413" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.4 5.2c4.3-.4 8.7-.4 13 0 .6.1 1 .5 1 1.1.2 6.5.2 13 0 19.5 0 .6-.5 1-1.1 1.1-4.3.3-8.6.3-12.9 0-.6 0-1-.5-1-1.1-.2-6.5-.2-13 0-19.5 0-.6.4-1 1-1.1Z"/><path d="M10.6 11.3c2.3-.2 4.6-.2 6.9 0"/><path d="M10.5 15.9c2.3-.2 4.7-.2 7 0"/><path d="M10.6 20.5c1.4-.2 2.9-.2 4.3 0"/></svg><div class="on">Skill</div></div>
+      <div class="oh"><span class="chev"></span><svg class="ic" viewBox="0 0 32 32" fill="none" stroke="#141413" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M26.2 15.7c.3 5.6-4.2 10.4-9.9 10.6-5.6.2-10.4-4.1-10.6-9.8C5.5 10.8 9.9 6 15.6 5.8c3.7-.1 7.1 1.7 9 4.8"/><path d="M25.9 4.6c.3 2 .5 4 .5 6.1-2 .2-4 .2-6.1.1"/></svg><div class="on">Loop</div></div>
+      <div class="oh"><span class="chev"></span><svg class="ic" viewBox="0 0 32 32" fill="none" stroke="#141413" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="17.6" r="10.3"/><path d="M16 11.6c0 2 0 4 .1 6 1.6 1 3.2 1.9 4.9 2.7"/><path d="M8.6 5.3c-1.3.8-2.5 1.9-3.4 3.2"/><path d="M23.4 5.3c1.3.8 2.5 1.9 3.5 3.2"/></svg><div class="on">Schedule</div></div>
+      <div class="lh2"><div class="ln">Law firm</div><div class="lj">Matter intake</div></div>
+      <div class="cell c1">Intake form arrives</div>
+      <div class="cell">Case system, email</div>
+      <div class="cell">Firm intake standard</div>
+      <div class="cell">Conflicts checked</div>
+      <div class="cell c5">Weekly aging report</div>
+      <div class="lh2"><div class="ln">Investment team</div><div class="lj">Diligence read</div></div>
+      <div class="cell c1">Data room updates</div>
+      <div class="cell">Data room, CRM</div>
+      <div class="cell">Memo format, red flags</div>
+      <div class="cell">Every claim sourced</div>
+      <div class="cell c5">Monday portfolio watch</div>
+      <div class="lh2"><div class="ln">School</div><div class="lj">Feedback at scale</div></div>
+      <div class="cell c1">Assignment batch closes</div>
+      <div class="cell">LMS and rubric</div>
+      <div class="cell">This teacher's voice</div>
+      <div class="cell">Graded on the rubric</div>
+      <div class="cell c5">Weekly per-student trend</div>
+    </div>
+    <div class="callout">Learn the pattern once. After that, the only new thing in any industry is what the nouns are called.</div>
+  </div>
+</section></div>
+
+
+<!-- ── DIAGRAM BESIDE PROSE ─────────────────────────────────────
+     A square diagram at fixed width beside two paragraphs split by a
+     rule. Use for cyclical concepts where a wide figure would waste
+     the left and right thirds. -->
+<div class="wrap"><section class="slide">
+  <div class="pad">
+    <p class="kicker">Organ five · Loops</p>
+    <h2>Let it keep going until it is actually done</h2>
+    <div style="display:flex;gap:52px;align-items:center;flex:1;min-height:0;margin-top:16px">
+      <svg viewBox="0 0 320 300" preserveAspectRatio="xMidYMid meet" style="height:100%;width:320px;flex:none" role="img" aria-label="Plan, act, check, repeat until it passes">
+        <defs><marker id="ar2" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+          <path d="M0 0 L9 4.5 L0 9 z" fill="#D97757"/></marker></defs>
+        <circle cx="150" cy="150" r="104" fill="none" stroke="rgba(20,20,19,.14)" stroke-width="1.5"/>
+        <path d="M150 46 A104 104 0 0 1 240 98" fill="none" stroke="#D97757" stroke-width="2.5" marker-end="url(#ar2)"/>
+        <path d="M243 205 A104 104 0 0 1 150 254" fill="none" stroke="#D97757" stroke-width="2.5" marker-end="url(#ar2)"/>
+        <path d="M60 205 A104 104 0 0 1 57 100" fill="none" stroke="#D97757" stroke-width="2.5" marker-end="url(#ar2)"/>
+        <circle cx="150" cy="46" r="34" fill="#141413"/><text class="txtb i" x="150" y="52" text-anchor="middle">Plan</text>
+        <circle cx="253" cy="200" r="34" fill="#141413"/><text class="txtb i" x="253" y="206" text-anchor="middle">Act</text>
+        <circle cx="47" cy="200" r="36" fill="#D97757"/><text class="txtb i" x="47" y="206" text-anchor="middle">Check</text>
+        <text class="txt" x="150" y="146" text-anchor="middle">repeat until</text>
+        <text class="txt" x="150" y="168" text-anchor="middle">the check passes</text>
+      </svg>
+      <div style="flex:1">
+        <p class="body" style="font-size:21px">First paragraph: what most people do instead, said without condescension.</p>
+        <div class="rule"></div>
+        <p class="body" style="font-size:21px">Second paragraph: what the diagram buys you, ending on three concrete examples.</p>
+      </div>
+    </div>
+    <div class="callout">The honest caveat. Name the hard part rather than pretending there is not one.</div>
+  </div>
+</section></div>
+
+
+<!-- ── SIGNAL COMPARISON CHART ──────────────────────────────────
+     Two timelines stacked: regular ticks versus irregular event spikes.
+     Good for clock-driven versus event-driven, planned versus reactive. -->
+<div class="wrap"><section class="slide">
+  <div class="pad">
+    <p class="kicker">Organ four · Managed agents</p>
+    <h2>A schedule fires on the clock. An agent fires on the world.</h2>
+    <div class="fig">
+      <svg viewBox="0 0 1080 240" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Scheduled ticks versus event-driven spikes">
+        <text class="lblc" x="0" y="12">Scheduled · fires at 7:00, every day</text>
+        <line x1="0" y1="70" x2="1080" y2="70" stroke="rgba(20,20,19,.28)" stroke-width="1.5"/>
+        <g stroke="#141413" stroke-width="3" stroke-linecap="round">
+          <line x1="60" y1="70" x2="60" y2="34"/><line x1="230" y1="70" x2="230" y2="34"/>
+          <line x1="400" y1="70" x2="400" y2="34"/><line x1="570" y1="70" x2="570" y2="34"/>
+          <line x1="740" y1="70" x2="740" y2="34"/><line x1="910" y1="70" x2="910" y2="34"/>
+        </g>
+        <text class="txt" x="0" y="98">The cost of the regular pattern, in one line.</text>
+        <text class="lblc" x="0" y="152">Event-driven · fires when something happens</text>
+        <text class="txt c" x="62" y="182">form submitted</text>
+        <text class="txt c" x="366" y="182">transcript lands</text>
+        <text class="txt c" x="628" y="182">deploy fails</text>
+        <text class="txt c" x="940" y="182">contract signed</text>
+        <line x1="0" y1="214" x2="1080" y2="214" stroke="rgba(20,20,19,.28)" stroke-width="1.5"/>
+        <g stroke="#D97757" stroke-width="3" stroke-linecap="round">
+          <line x1="88" y1="214" x2="88" y2="192"/><line x1="132" y1="214" x2="132" y2="192"/>
+          <line x1="392" y1="214" x2="392" y2="192"/><line x1="654" y1="214" x2="654" y2="192"/>
+          <line x1="700" y1="214" x2="700" y2="192"/><line x1="726" y1="214" x2="726" y2="192"/>
+          <line x1="982" y1="214" x2="982" y2="192"/>
+        </g>
+      </svg>
+    </div>
+    <p class="cap">One line naming what the second pattern collapses to zero.</p>
+    <div class="callout" style="margin-top:22px">When to reach for each one.</div>
+  </div>
+</section></div>
+
+
+<!-- ── CROSSOVER CHART ──────────────────────────────────────────
+     Two cumulative lines and a break-even marker. Use whenever the
+     argument is "costs more once, less every time after." -->
+<div class="wrap"><section class="slide">
+  <div class="pad">
+    <p class="kicker">The honest math</p>
+    <h2>It costs more the first time and less every time after</h2>
+    <div class="fig">
+      <svg viewBox="0 0 1080 250" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Cumulative effort crossing around the fifth run">
+        <text class="lbl" x="0" y="14">Total effort ↑</text>
+        <line x1="60" y1="212" x2="1040" y2="212" stroke="rgba(20,20,19,.28)"/>
+        <line x1="60" y1="26" x2="60" y2="212" stroke="rgba(20,20,19,.28)"/>
+        <text class="lbl" x="60" y="242">Number of times you do this task →</text>
+        <path d="M60 208 L1030 36" fill="none" stroke="#141413" stroke-width="2.5"/>
+        <text class="txtb" x="1030" y="26" text-anchor="end">Doing it by hand every time</text>
+        <path d="M60 140 L1030 110" fill="none" stroke="#D97757" stroke-width="3"/>
+        <text class="txtb c" x="1030" y="136" text-anchor="end">Building the system</text>
+        <line x1="524" y1="126" x2="524" y2="212" stroke="rgba(20,20,19,.35)" stroke-dasharray="4 4"/>
+        <circle cx="524" cy="126" r="7" fill="#141413"/>
+        <text class="txt" x="524" y="106" text-anchor="middle">break-even, roughly the fifth run</text>
+        <text class="txt c" x="68" y="164">the setup tax you pay once</text>
+      </svg>
+    </div>
+    <div class="callout">The decision rule, stated as a number the audience can apply tonight.</div>
+  </div>
+</section></div>
+
+
+<!-- ── CHECKLIST · clay ─────────────────────────────────────────
+     The take-home slide. Every line is a question the audience can ask
+     themselves, and the answer names the thing they should build. Bold
+     the noun. This is the slide people photograph. -->
+<div class="wrap"><section class="slide clay">
+  <div class="pad">
+    <p class="kicker">Take this with you</p>
+    <h2 style="color:var(--ivory)">Six questions to ask before your next prompt</h2>
+    <div class="list">
+      <div class="li"><div class="k">1</div><div><div class="t">Have I done this before?</div><div class="s">If yes, you are not writing a prompt. You are writing a <strong>skill</strong>.</div></div></div>
+      <div class="li"><div class="k">2</div><div><div class="t">Am I pasting context in by hand?</div><div class="s">Every paste is a missing <strong>connector</strong>.</div></div></div>
+      <div class="li"><div class="k">3</div><div><div class="t">Does this only happen when I remember it?</div><div class="s">Then it belongs on a <strong>schedule</strong>.</div></div></div>
+      <div class="li"><div class="k">4</div><div><div class="t">Should this start when something happens, not when I ask?</div><div class="s">That is a <strong>managed agent</strong>.</div></div></div>
+      <div class="li"><div class="k">5</div><div><div class="t">Who checks the output, me or the system?</div><div class="s">If the answer is you, you are missing a <strong>loop</strong>.</div></div></div>
+      <div class="li"><div class="k">6</div><div><div class="t">Is "good" written down anywhere?</div><div class="s">If not, you have no bar to raise. Start with the <strong>evaluation</strong>.</div></div></div>
+    </div>
+  </div>
+</section></div>
+
+
+<!-- ── FOUR STEPS · homework ────────────────────────────────────
+     The assignment. Four verbs, one line each, sized to be done this
+     week. Always give a time budget in the headline. -->
+<div class="wrap"><section class="slide">
+  <div class="pad">
+    <p class="kicker">Homework</p>
+    <h2>One loop, thirty minutes, this week</h2>
+    <div class="cols c4">
+      <div class="card"><span class="num">01</span><h3>Pick</h3><p>The narrowest possible starting point, described so nobody has to choose.</p></div>
+      <div class="card"><span class="num">02</span><h3>Encode</h3><p>The one artifact they write down.</p></div>
+      <div class="card"><span class="num">03</span><h3>Connect</h3><p>The one thing they wire up.</p></div>
+      <div class="card"><span class="num">04</span><h3>Check</h3><p>The definition of done they commit to.</p></div>
+    </div>
+    <div class="callout" style="font-size:24px">The reframe that makes the homework feel worth doing.</div>
+  </div>
+</section></div>
+
+
+<!-- ── CLOSE · clay, no chrome ──────────────────────────────────
+     Mirrors the title slide. Same words as the title, so the deck lands
+     where it started, with the meaning now filled in. -->
+<div class="wrap"><section class="slide clay no-chrome">
+  <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 100px">
+    <img src="{{ASSET:spark-ivory.png}}" style="width:64px;margin-bottom:34px" alt="">
+    <h1 style="font-size:126px">Deck Title</h1>
+    <p style="font-size:30px;line-height:1.4;margin-top:34px;max-width:900px;color:rgba(250,249,245,.9)">The title said back as a full sentence, now that the audience knows what it means.</p>
+  </div>
+</section></div>
+
+
+<!-- ── CTA + QR · clay ──────────────────────────────────────────
+     Last slide, stays on screen through the breakout. Generate the QR
+     into the deck folder as feedback-qr.png; build.py finds loose files
+     at the deck root. Links are always the live site paths. -->
+<div class="wrap"><section class="slide clay">
+  <div class="pad" style="flex-direction:row;gap:60px;align-items:center">
+    <div style="flex:none;text-align:center">
+      <div class="qr"><img src="{{ASSET:feedback-qr.png}}" alt="Event feedback QR code"></div>
+      <p style="font-family:'AnthropicSans';font-size:13px;letter-spacing:.18em;text-transform:uppercase;margin-top:16px;color:rgba(250,249,245,.86)">Tell us how tonight went</p>
+    </div>
+    <div style="flex:1">
+      <p class="kicker">Stay in it</p>
+      <h2 style="color:var(--ivory);font-size:48px">Where to find us next</h2>
+      <div class="links" style="margin-top:26px">
+        <div class="link"><div class="a">Site &amp; events</div><div class="b">claudecommunitynyc.com</div></div>
+        <div class="link"><div class="a">Show your work</div><div class="b">claudecommunitynyc.com/demos</div></div>
+        <div class="link"><div class="a">Co-host</div><div class="b">claudecommunitynyc.com/collaborate</div></div>
+        <div class="link"><div class="a">Speak</div><div class="b">claudecommunitynyc.com/speak</div></div>
+        <div class="link"><div class="a">Community</div><div class="b">WhatsApp · join from the site footer</div></div>
+      </div>
+    </div>
+  </div>
+</section></div>

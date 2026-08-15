@@ -1,0 +1,11 @@
+.DS_Store
+__pycache__/
+*.pyc
+# per-event working output, never the skills themselves
+/events/
+**/out/
+**/*-print.png
+**/*-print.pdf
+**/PROOF-*.png
+.luma-sent.log
+.emails-sent.log

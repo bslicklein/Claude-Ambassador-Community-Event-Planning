@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268 252">
+  <!-- Growth capital: a sprout rising from a stack of coins. Drawn to match
+       the kit's hand-drawn icon style (thick irregular ink strokes, ivory
+       fills). Not from the official set. Distinct from finance.svg, which is
+       the rising-bars chart. Coins are drawn bottom-first so the top one
+       overlaps and the stack reads as depth. -->
+  <path d="M134 166 C132 140 130 112 134 74" fill="none" stroke="#141413" stroke-width="9" stroke-linecap="round"/>
+  <path d="M131 138 C104 140 76 124 68 96 C97 85 124 100 133 124 Z" fill="#FAF9F5" stroke="#141413" stroke-width="9" stroke-linejoin="round"/>
+  <path d="M136 106 C163 103 190 85 196 57 C168 48 142 66 134 92 Z" fill="#FAF9F5" stroke="#141413" stroke-width="9" stroke-linejoin="round"/>
+  <path d="M64 206 C64 195 95 187 134 187 C173 187 204 195 204 206 C204 217 173 225 134 225 C95 225 64 217 64 206 Z" fill="#FAF9F5" stroke="#141413" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M64 182 C64 171 95 163 134 163 C173 163 204 171 204 182 C204 193 173 201 134 201 C95 201 64 193 64 182 Z" fill="#FAF9F5" stroke="#141413" stroke-width="10" stroke-linejoin="round"/>
+</svg>

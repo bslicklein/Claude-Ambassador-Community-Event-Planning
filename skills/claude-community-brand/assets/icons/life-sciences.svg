@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268 252">
+  <!-- Molecule: three bonded atoms. Drawn to match the kit's hand-drawn icon
+       style (thick irregular ink strokes, ivory fills). Not from the official set.
+       Bonds share one path so the atoms stay the only closed shapes. -->
+  <path d="M100 88 C122 92 152 98 176 102 M182 132 C168 145 150 158 136 170 M98 168 C93 148 88 126 84 106" fill="none" stroke="#141413" stroke-width="9" stroke-linecap="round"/>
+  <path d="M78 51 C94 50 106 63 105 79 C104 95 91 106 76 105 C60 104 50 90 51 75 C52 60 64 52 78 51 Z" fill="#FAF9F5" stroke="#141413" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M196 81 C212 81 224 94 223 110 C222 126 209 136 194 135 C178 134 168 120 169 105 C170 90 183 82 196 81 Z" fill="#FAF9F5" stroke="#141413" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M118 163 C134 163 146 176 145 192 C144 208 131 218 116 217 C100 216 90 202 91 187 C92 172 105 164 118 163 Z" fill="#FAF9F5" stroke="#141413" stroke-width="10" stroke-linejoin="round"/>
+</svg>
