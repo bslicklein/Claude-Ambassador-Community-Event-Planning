@@ -192,3 +192,10 @@ different vendors, on purpose.
   derived, how to add a stock, why Chrome is the required renderer.
 - Worked example: `~/AI_HOME/Claude_Ambassador/events/la-claude-conversation-2026-07/badges/`
   — 69 named + 9 blank on 74541, printed 2026-07-23.
+
+## Part of a bigger sequence
+
+This skill produces one artifact. `/ambassador:claude-and-coffee` owns the order the
+artifacts get made in, the gates that block, and the reimbursement rules, and calls
+this one at the right moment. Use it when running a whole event rather than making a
+single thing.

@@ -98,3 +98,10 @@ Venues say they have one and then do not.
   visible from the door and reads as a scramble.
 - Keep the final PNG. Photographed next to the easel, it is the best single
   documentation shot of the event for a recap post.
+
+## Part of a bigger sequence
+
+This skill produces one artifact. `/ambassador:claude-and-coffee` owns the order the
+artifacts get made in, the gates that block, and the reimbursement rules, and calls
+this one at the right moment. Use it when running a whole event rather than making a
+single thing.

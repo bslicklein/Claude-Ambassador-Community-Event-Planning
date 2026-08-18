@@ -1,0 +1,62 @@
+{
+  "slug": "",
+  "name": "Claude & Coffee",
+  "city": "New York",
+  "date": "",
+  "doors": "5:00 PM",
+  "ends": "8:00 PM",
+  "format": "meetup",
+  "topic": "",
+  "seats": 100,
+
+  "venue": {
+    "name": "", "address": "", "contact": "", "phone": "",
+    "wifi": "",
+    "quoted_total": null,
+    "itemized_invoice": false,
+    "deposit": null,
+    "deposit_refundable": true
+  },
+
+  "luma": {
+    "event_id": "",
+    "url": "",
+    "requested_from_anthropic": false,
+    "published": false
+  },
+
+  "room_brief": {
+    "personas": [],
+    "industry_targets": {},
+    "industry_caps": {},
+    "company_cap": 2,
+    "note": "Required before any research runs. See ambassador:event-attendee-research."
+  },
+
+  "agenda": [
+    "5:00|Doors, coffee, name badges",
+    "5:30|Keynote",
+    "6:15|Coworking at your table",
+    "8:00|Close"
+  ],
+
+  "artifacts": {
+    "banner": {"ordered": false, "size": "33x81", "vendor": "Vistaprint"},
+    "board":  {"ordered": false, "size": "24x36", "vendor": "FedEx Office"},
+    "badges": {"printed": false, "stock": "74541", "vendor": "Staples"},
+    "deck":   {"built": false, "title": ""},
+    "qr_url": ""
+  },
+
+  "budget": {
+    "tier": "A",
+    "expected_attendees": 100,
+    "cap": 1500,
+    "preapproval_requested": false,
+    "preapproval_granted": false,
+    "spend": []
+  },
+
+  "team": [],
+  "notes": ""
+}

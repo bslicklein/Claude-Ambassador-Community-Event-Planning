@@ -198,3 +198,10 @@ Drafts first, every time. Read ten of them before any of it leaves the building.
   emails are not reversible.
 - Re-running `score.py` is free and rewrites nothing that was sent. Re-run it whenever
   new research lands, right up until the push.
+
+## Part of a bigger sequence
+
+This skill produces one artifact. `/ambassador:claude-and-coffee` owns the order the
+artifacts get made in, the gates that block, and the reimbursement rules, and calls
+this one at the right moment. Use it when running a whole event rather than making a
+single thing.

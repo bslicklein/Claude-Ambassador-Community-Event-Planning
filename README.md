@@ -1,8 +1,12 @@
 # Claude Ambassador Community Event Planning
 
-Six Claude Code skills that run a Claude Community event end to end: decide who is
-in the room, build what gets presented, and produce every printed artifact on brand
-and on the print vendor's spec.
+Seven Claude Code skills that run a Claude Community event end to end: sequence the
+whole thing, decide who is in the room, build what gets presented, and produce every
+printed artifact on brand and on the print vendor's spec.
+
+**Start with `claude-and-coffee`.** It is the entry point for the event type and it
+calls the other six at the moment each one is needed. The rest are usable alone if
+you only want one artifact.
 
 Built while running Claude Community events in New York City. Every number in here
 came from an event that actually happened, and the parts that have not been
@@ -12,6 +16,7 @@ physically printed yet say so.
 
 | Skill | What it does | Vendor |
 |---|---|---|
+| `claude-and-coffee` | **The entry point.** 17 dated gates from T-42 to T+7, the format and budget decisions, copy kit, run of show, reimbursement. Scaffolds the event folder and reports status against what is actually on disk | |
 | `event-attendee-research` | Deep-researches the registration list, scores it against a required room brief, allocates seats, pushes approvals to Luma, assigns workshop tables, writes personalized email | Luma |
 | `claude-community-brand` | The official ambassador brand system: palette, fonts, spark, arch, globe, 13-icon library, and the recipe for drawing new on-style icons | — |
 | `claude-community-deck` | The event keynote or welcome deck: 31 slide patterns, present mode, one-slide-per-page PDF export | — |
@@ -39,20 +44,28 @@ namespaced, for example `/ambassador:event-attendee-research`. Pull updates with
 
 ## Running an event with these
 
-Roughly four weeks out, in this order:
+```
+/ambassador:claude-and-coffee
+```
 
-1. **Open registration**, then let it fill. Nothing below matters until there are
-   more registrants than seats.
-2. **`event-attendee-research`** — get the room brief from the host first, since the
-   skill refuses to run without it. Research, rank, seat, approve, assign tables.
-   This is the long pole; start it two weeks out.
-3. **`event-rollup-banner`** — order first, it ships and cannot be rushed. Two weeks
-   minimum.
-4. **`claude-community-deck`** — build the deck while the banner is in transit.
-5. **`event-name-badges`** — print once the list is final, which is later than you
-   think. Buy 15% more stock than headcount.
-6. **`event-welcome-board`** — last, deliberately. FedEx Office turns it around same
-   day, so the run of show can keep moving until 24 hours out.
+That skill scaffolds the event folder and drives the sequence. The order it enforces,
+and the reason for each position:
+
+| | Gate | Why here |
+|---|---|---|
+| T-42 | Date, format, Luma request | Format is a money decision, and Anthropic builds the page |
+| T-35 | Venue with an **itemized** quote | A paid venue will not re-cut its invoice for you |
+| T-28 | Page live, copy posted | Promotion needs a week minimum to fill a room |
+| T-21 | Room brief locked | The research tool refuses to run without it |
+| T-14 | Banner ordered | Vistaprint ships and cannot be rushed |
+| T-10 | Research done, approvals pushed | Guests need time to put it in a calendar |
+| T-7 | Deck | Built while the banner is in transit |
+| T-5 | Tables, badges | The list is final later than you think |
+| T-2 | Welcome board | Same-day turnaround, so the agenda can move until now |
+| T+3 | Reimbursement | Payouts run Fridays |
+
+`status.py` reports where an event actually is by looking for the artifacts on disk,
+not by trusting ticked boxes, and warns when the venue quote crosses the tier cap.
 
 ## Lead times, which are the actual constraint
 

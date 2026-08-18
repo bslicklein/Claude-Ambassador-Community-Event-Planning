@@ -90,3 +90,10 @@ and confirm the delivery date before checkout rather than after.
   holding a coffee, not studied.
 - Keep the rendered PNG and PDF with the event folder. Reordering a lost banner
   file three months later costs more time than the banner did.
+
+## Part of a bigger sequence
+
+This skill produces one artifact. `/ambassador:claude-and-coffee` owns the order the
+artifacts get made in, the gates that block, and the reimbursement rules, and calls
+this one at the right moment. Use it when running a whole event rather than making a
+single thing.
