@@ -11,7 +11,7 @@ who sits with whom, and what to say to each of them.
 **The failure this prevents:** approving off the registration CSV. The form's ceiling
 is what someone typed in eight seconds on their phone, and senior people
 under-describe themselves. On a 571-person run, "Meta · Manager" was the co-founder of
-a $4.65B AI lab and "Columbia Business School" had built Claude's own NYC builder
+a USD 4.65B AI lab and "Columbia Business School" had built Claude's own NYC builder
 community past 1,000 members. Both would have been buried. See
 `reference/research-brief.md` for the full list.
 

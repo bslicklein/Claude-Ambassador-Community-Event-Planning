@@ -11,7 +11,7 @@ the moment they are actually needed.
 
 **The failure this prevents:** every individual artifact being excellent and the
 event still going badly, because the venue invoice was a lump sum, the Luma page
-went up nine days out, or a $1,110 overspend had no pre-approval behind it. Those
+went up nine days out, or a USD 1,110 overspend had no pre-approval behind it. Those
 are all sequencing failures. That is what this skill is.
 
 ## Start here, always
@@ -64,7 +64,7 @@ turns it around same day and the agenda always changes.
 
 ## The four decisions this skill exists to force
 
-1. **Format, at T-42.** A Workshop carries $50 of attendee credits per person and
+1. **Format, at T-42.** A Workshop carries USD 50 of attendee credits per person and
    a Meetup does not, and it cannot be reclassified later. Ask what people will
    actually be doing for the middle ninety minutes, then pick. See
    `reference/program-rules.md`.
@@ -82,11 +82,11 @@ turns it around same day and the agenda always changes.
 
 Read `reference/budget.md` before quoting anything to a venue. The short version:
 
-- Tier A caps: $750 under 40 attendees, $1,125 to 70, **$1,500 above 70**,
-  $5,000 for an Impact Lab.
+- Tier A caps: USD 750 under 40 attendees, USD 1,125 to 70, **USD 1,500 above 70**,
+  USD 5,000 for an Impact Lab.
 - Covered categories are exactly three: **venue, refreshments, printed assets.**
 - Over the cap needs written pre-approval from community@anthropic.com **before**
-  the spend. On 2026-08-11 that step was skipped and roughly $1,110 of $2,705 was
+  the spend. On 2026-08-11 that step was skipped and roughly USD 1,110 of USD 2,705 was
   unrecoverable.
 - Submit via Typeform, access code 419736. **Payouts run Fridays**, which is why
   the gate is T+3 and not "soon".
